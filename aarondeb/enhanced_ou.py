@@ -1,9 +1,10 @@
 import numpy as np
 import pandas as pd
-from mlfinlab.optimal_mean_reversion import OrnsteinUhlenbeck
+#from mlfinlab.optimal_mean_reversion import OrnsteinUhlenbeck
 
 
-class EnhancedOU(OrnsteinUhlenbeck):
+#class EnhancedOU(OrnsteinUhlenbeck):
+class EnhancedOU():
     """
     Extension of the OrnsteinUhlenbeck class from the mlfinlab library. The new methods added
     consist of calculating the half life based of the selected time delta and calculating the

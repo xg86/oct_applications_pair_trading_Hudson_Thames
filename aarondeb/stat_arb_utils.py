@@ -133,8 +133,8 @@ def run_ou_tests(spreads_df: pd.DataFrame, combinations: list, test_period: str 
                                spreads_df=spreads_df,
                                test_period=test_period,
                                cross_overs_per_delta=cross_overs_per_delta,
-                               num_threads=num_threads,
-                               verbose=verbose,
+                               num_threads=num_threads
+                               #verbose=verbose,
                                )
 
     return ou_results
@@ -193,8 +193,8 @@ def run_cointegration_tests(prices_df: pd.DataFrame, combinations: list, num_thr
     cointegration_results = mp_pandas_obj(func=_outer_cointegration_loop,
                                           pd_obj=('molecule', combinations),
                                           prices_df=prices_df,
-                                          num_threads=num_threads,
-                                          verbose=verbose,
+                                          num_threads=num_threads
+                                          #verbose=verbose,
                                           )
 
     return cointegration_results.sort_values(['pvalue'], ascending=True)
